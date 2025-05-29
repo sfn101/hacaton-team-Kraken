@@ -7,10 +7,12 @@ import Navbar from './components/navbar';
 import AboutUs from './components/about';
 import ModernCards from './components/card';
 import Footer from './components/footer';
+import BlogApp from './components/BlogApp'
 
 // Home page component
 function Home() {
   return (
+
     <>
       <SwipeSlides />
       <AboutUs />
@@ -19,14 +21,6 @@ function Home() {
   );
 }
 
-// Post page component (placeholder)
-function Post() {
-  return (
-    <div>
-      <div> Hello</div>
-    </div>
-  );
-}
 
 function App() {
   return (
@@ -38,7 +32,7 @@ function App() {
         <main className="flex-grow w-full">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/post" element={<Post />} />
+            <Route path="/post" element={<BlogApp />} />
           </Routes>
         </main>
         <Footer />
