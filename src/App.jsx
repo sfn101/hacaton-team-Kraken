@@ -1,22 +1,19 @@
-import { useState } from 'react';
-import './App.css';
+//import { useState } from 'react'
+import './App.css'
 
-// Components
-import SwipeSlides from './components/SwipeSlides';
-import Navbar from "./components/navbar";
-import SkeletonCards from './components/card';
+//components
+import SwipeSlides from './components/SwipeSlides'
 
 function App() {
 
-  return (
-    <div className="flex flex-col min-h-screen w-full">
-      <main className="flex-grow w-full">
-        <Navbar />
-        <SwipeSlides />
-        <SkeletonCards />
-      </main>
-    </div>
-  );
-}
 
-export default App;
+  function App() {
+    return (
+      <div className="min-h-screen bg-gray-100">
+        <SkeletonCards />
+>>>>>>>>> Temporary merge branch 2
+      </div>
+    )
+  }
+
+  export default App;
