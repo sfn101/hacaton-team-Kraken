@@ -1,18 +1,19 @@
 import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const navigation = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Features', href: '#features' },
+  { name: 'Home', href: '/' },
+  { name: 'Post', href: '/post' },
 ];
 
-export default function ImprovedNavbar() {
-  const [currentPage, setCurrentPage] = useState('Home');
+export default function Navbar() {
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleNavClick = (itemName, e) => {
-    e.preventDefault();
-    setCurrentPage(itemName);
+  // Get current page name based on pathname
+
+
+  const handleNavClick = () => {
     setIsMobileMenuOpen(false);
   };
 
@@ -47,27 +48,28 @@ export default function ImprovedNavbar() {
           {/* Logo and Desktop Nav */}
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center group cursor-pointer">
-              <div className="relative">
-                <div className="w-10 h-10 rounded-lg overflow-hidden shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300 transform group-hover:scale-105">
-                  <img
-                    src="/image/images-removebg-preview.png"
-                    alt="Geeks Institute Logo"
-                    className="w-full h-full object-cover"
-                  />
+              <Link to="/" className="flex items-center">
+                <div className="relative">
+                  <div className="w-10 h-10 rounded-lg overflow-hidden shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300 transform group-hover:scale-105">
+                    <img
+                      src="/image/images-removebg-preview.png"
+                      alt="Geeks Institute Logo"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
-              </div>
-              <span className="ml-3 text-white font-semibold text-lg hidden sm:block">Geeks Institute</span>
+                <span className="ml-3 text-white font-semibold text-lg hidden sm:block">Geeks Institute</span>
+              </Link>
             </div>
 
             <div className="hidden sm:ml-8 sm:block">
               <div className="flex space-x-1">
                 {navigation.map((item) => {
-                  const isActive = currentPage === item.name;
+                  const isActive = location.pathname === item.href;
                   return (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
-                      onClick={(e) => handleNavClick(item.name, e)}
+                      to={item.href}
                       className={`group relative flex items-center rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 ease-in-out hover:scale-105 ${isActive
                         ? 'bg-blue-600 text-white shadow-lg'
                         : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
@@ -78,7 +80,7 @@ export default function ImprovedNavbar() {
                       {isActive && (
                         <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-6 h-0.5 bg-blue-400 rounded-full"></div>
                       )}
-                    </a>
+                    </Link>
                   );
                 })}
               </div>
@@ -108,19 +110,19 @@ export default function ImprovedNavbar() {
         <div className="sm:hidden bg-gray-800/95 backdrop-blur-sm border-t border-gray-700 transform transition-all duration-300 ease-in-out">
           <div className="space-y-1 px-4 pt-2 pb-3">
             {navigation.map((item) => {
-              const isActive = currentPage === item.name;
+              const isActive = location.pathname === item.href;
               return (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
-                  onClick={(e) => handleNavClick(item.name, e)}
+                  to={item.href}
+                  onClick={handleNavClick}
                   className={`group flex items-center rounded-lg px-3 py-2 text-base font-medium transition-all duration-200 ${isActive
                     ? 'bg-blue-600 text-white'
                     : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
                     }`}
                 >
                   {item.name}
-                </a>
+                </Link>
               );
             })}
           </div>
@@ -129,3 +131,4 @@ export default function ImprovedNavbar() {
     </nav>
   );
 }
+
