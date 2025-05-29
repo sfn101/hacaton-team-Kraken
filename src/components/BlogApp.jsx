@@ -65,7 +65,7 @@ const BlogApp = () => {
     
     return (
       <div 
-        className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+        className="bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl w-full"
         onClick={() => handlePostClick(post)}
       >
         <div className="relative">
@@ -197,19 +197,19 @@ const BlogApp = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 w-full">
         {currentView === 'posts' ? (
           <>
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Our Blog
-              </h1>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Discover the latest insights, tutorials, and tips from our community of developers and designers.
-              </p>
+            <div className="text-center mb-12 ">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 mt-8">
+  Our Blog
+</h1>
+<p className="text-xl text-gray-600 max-w-2xl mx-auto">
+  Discover the latest insights, tutorials, and tips from our community of developers and designers.
+</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
               {posts.map(post => (
                 <PostCard key={post.id} post={post} />
               ))}
