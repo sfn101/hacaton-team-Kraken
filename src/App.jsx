@@ -7,6 +7,7 @@ import Navbar from './components/navbar';
 import AboutUs from './components/about';
 import ModernCards from './components/card';
 import Footer from './components/footer';
+import BlogApp from './components/BlogApp'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <SwipeSlides />
         <AboutUs />
         <ModernCards />
+        <BlogApp />
         <Footer />
       </main>
     </div>
