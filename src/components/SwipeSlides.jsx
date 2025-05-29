@@ -22,7 +22,6 @@ const SwiperSlider = () => {
           {/* Second column - placeholder */}
           <div className="flex-1">
             <img src="/images/trnsparnt-bottle.png" alt="Image of our innovative bottle design" className="absolute top-0 left-1/3  " />
-            <img src="/images/ChatGPT Image May 28, 2025, 11_50_21 PM.png" alt="" className="absolute top-0 left-1/4 w-full h-full object-contain opacity-80" />
           </div>
         </div>
       </SwiperSlide>
