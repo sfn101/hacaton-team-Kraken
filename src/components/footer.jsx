@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bcda931f5ada2a0cbf984b48d929953a86d7bf81
 import { FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
 
 function Footer() {
@@ -23,6 +26,7 @@ function Footer() {
           <a href="#" className="hover:text-pink-400 transition"><FaInstagram /></a>
           <a href="#" className="hover:text-pink-400 transition"><FaTiktok /></a>
           <a href="#" className="hover:text-pink-400 transition"><FaFacebook /></a>
+<<<<<<< HEAD
 =======
 import React from 'react';
  <link
@@ -218,10 +222,13 @@ const Footer = () => {
             </div>
           </div>
 >>>>>>> ff0fed5aa7813f09ef23409de1f0f9fb8e53f696
+=======
+>>>>>>> bcda931f5ada2a0cbf984b48d929953a86d7bf81
         </div>
       </div>
     </footer>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -231,3 +238,8 @@ export default Footer;
 
 export default Footer;
 >>>>>>> ff0fed5aa7813f09ef23409de1f0f9fb8e53f696
+=======
+}
+
+export default Footer;
+>>>>>>> bcda931f5ada2a0cbf984b48d929953a86d7bf81
