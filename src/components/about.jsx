@@ -39,7 +39,7 @@ const AboutUs = () => {
       avatar: "👨‍💼"
     },
     {
-      name: "Fatima El Alami", 
+      name: "Fatima El Alami",
       role: "Responsable Qualité",
       description: "Garante de l'excellence de nos produits et services",
       avatar: "👩‍🔬"
@@ -63,7 +63,7 @@ const AboutUs = () => {
               À propos de <span className="text-yellow-300">MonSite</span>
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-              Votre partenaire de confiance depuis plus de 10 ans au Maroc. 
+              Votre partenaire de confiance depuis plus de 10 ans au Maroc.
               Nous transformons vos idées en réalité avec passion et expertise.
             </p>
           </div>
@@ -81,21 +81,21 @@ const AboutUs = () => {
               </h2>
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Depuis notre création en 2014 à Casablanca, MonSite s'est donné pour mission 
-                  de révolutionner l'expérience client en proposant des produits et services 
+                  Depuis notre création en 2014 à Casablanca, MonSite s'est donné pour mission
+                  de révolutionner l'expérience client en proposant des produits et services
                   d'exception.
                 </p>
                 <p>
-                  Nous croyons fermement que chaque client mérite le meilleur. C'est pourquoi 
+                  Nous croyons fermement que chaque client mérite le meilleur. C'est pourquoi
                   nous mettons un point d'honneur à dépasser vos attentes à chaque interaction.
                 </p>
                 <p>
-                  Notre approche personnalisée et notre engagement envers l'innovation font 
+                  Notre approche personnalisée et notre engagement envers l'innovation font
                   de nous le partenaire idéal pour vos projets les plus ambitieux.
                 </p>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-12 text-center shadow-lg">
                 <div className="text-8xl mb-6">🌟</div>
@@ -207,7 +207,7 @@ const AboutUs = () => {
                 Prêt à Démarrer Votre Projet ?
               </h2>
               <p className="text-xl mb-10 text-blue-100 max-w-2xl mx-auto">
-                Rejoignez les milliers de clients qui nous font confiance. 
+                Rejoignez les milliers de clients qui nous font confiance.
                 Découvrez comment nous pouvons transformer vos idées en succès.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -224,7 +224,7 @@ const AboutUs = () => {
       </section>
 
       {/* Bottom Spacing for Fixed Footer */}
-      <div className="pb-96"></div>
+      <div className="pb-5"></div>
     </div>
   );
 };
