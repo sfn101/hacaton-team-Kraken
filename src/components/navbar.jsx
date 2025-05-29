@@ -1,18 +1,20 @@
 import { useState } from 'react';
 
 const navigation = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Features', href: '#features' },
+  { name: 'Home', page: 'home', href: '#home' },
+  { name: 'About', page: 'home', href: '#about' },
+  { name: 'Features', page: 'home', href: '#features' },
+  { name: 'Blog', page: 'blog', href: '#blog' },
 ];
 
-export default function ImprovedNavbar() {
-  const [currentPage, setCurrentPage] = useState('Home');
+export default function ImprovedNavbar({ currentPage, onNavigate }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleNavClick = (itemName, e) => {
+  const handleNavClick = (page, e) => {
     e.preventDefault();
-    setCurrentPage(itemName);
+    if (onNavigate) {
+      onNavigate(page);
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -62,12 +64,12 @@ export default function ImprovedNavbar() {
             <div className="hidden sm:ml-8 sm:block">
               <div className="flex space-x-1">
                 {navigation.map((item) => {
-                  const isActive = currentPage === item.name;
+                  const isActive = currentPage === item.page;
                   return (
                     <a
                       key={item.name}
                       href={item.href}
-                      onClick={(e) => handleNavClick(item.name, e)}
+                      onClick={(e) => handleNavClick(item.page, e)}
                       className={`group relative flex items-center rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 ease-in-out hover:scale-105 ${isActive
                         ? 'bg-blue-600 text-white shadow-lg'
                         : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
@@ -108,12 +110,12 @@ export default function ImprovedNavbar() {
         <div className="sm:hidden bg-gray-800/95 backdrop-blur-sm border-t border-gray-700 transform transition-all duration-300 ease-in-out">
           <div className="space-y-1 px-4 pt-2 pb-3">
             {navigation.map((item) => {
-              const isActive = currentPage === item.name;
+              const isActive = currentPage === item.page;
               return (
                 <a
                   key={item.name}
                   href={item.href}
-                  onClick={(e) => handleNavClick(item.name, e)}
+                  onClick={(e) => handleNavClick(item.page, e)}
                   className={`group flex items-center rounded-lg px-3 py-2 text-base font-medium transition-all duration-200 ${isActive
                     ? 'bg-blue-600 text-white'
                     : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
