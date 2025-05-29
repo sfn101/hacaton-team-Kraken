@@ -29,7 +29,7 @@ export default function ImprovedNavbar() {
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
               onClick={toggleMobileMenu}
-              className="group relative inline-flex items-center justify-center rounded-lg p-2 text-gray-400 hover:bg-gray-700/50 hover:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-200 ease-in-out"
+              className="group relative inline-flex items-center justify-center rounded-lg p-2 text-white hover:bg-gray-700/50 hover:text-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-200 ease-in-out"
             >
               <span className="sr-only">Open main menu</span>
               {isMobileMenuOpen ? (
@@ -68,9 +68,9 @@ export default function ImprovedNavbar() {
                       key={item.name}
                       href={item.href}
                       onClick={(e) => handleNavClick(item.name, e)}
-                      className={`group relative flex items-center rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 ease-in-out hover:scale-105 ${isActive
-                        ? 'bg-blue-600 text-white shadow-lg'
-                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                      className={` group relative flex items-center rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 ease-in-out hover:scale-105 ${isActive
+                        ? 'bg-blue-200 text-white shadow-lg'
+                        : 'text-white hover:bg-gray-700/50 hover:text-white'
                         }`}
                     >
                       <span className="mr-2">{/* icon slot if needed */}</span>
@@ -89,13 +89,13 @@ export default function ImprovedNavbar() {
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-3">
             <button
               onClick={() => console.log('Sign In clicked')}
-              className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-all duration-200 ease-in-out hover:bg-gray-700/50 rounded-lg"
+              className="text-blue-500 hover:text-blue-700 px-3 py-2 text-sm font-medium transition-all duration-200 ease-in-out hover:bg-gray-700/50 rounded-lg"
             >
               Sign In
             </button>
             <button
               onClick={() => console.log('Sign Up clicked')}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+              className="text-blue-500 hover:text-blue-700 px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ease-in-out transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
             >
               Sign Up
             </button>
