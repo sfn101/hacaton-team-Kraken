@@ -2,25 +2,21 @@
 import './App.css'
 
 //components
-import Navbar from "./components/navbar";
-import SkeletonCards from './components/card';
-
+import SwipeSlides from './components/SwipeSlides'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <>
-      <div>
-        <div className="pt-16">
+    <div className="flex flex-col min-h-screen">
+      {/* Constrained main content */}
+      <div id="root" className="">
+        <main>
 
-          <Navbar />
-        </div>
-        <div className="min-h-screen bg-gray-100">
-          <SkeletonCards />
-        </div>
-
+          <SwipeSlides />
+        </main>
       </div>
-
-    </>
+    </div>
   )
 }
 
